@@ -3,6 +3,25 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import  firebase from 'firebase/app';
+// import 'firebase/storage';
+// import 'firebase/firestore';
+import firebase from "firebase" ;
+
+// const firebase = require('firebase');
+// require('firebase/firestore');
+
+ //Your web app's Firebase configuration
+ const firebaseConfig = {
+  apiKey: "AIzaSyBen5AA6BUX3BDZfT7rT023UrsqCrXeVQQ",
+  authDomain: "evernote-clone-1fa7b.firebaseapp.com",
+  projectId: "evernote-clone-1fa7b",
+  storageBucket: "evernote-clone-1fa7b.appspot.com",
+  messagingSenderId: "616765048554",
+  appId: "1:616765048554:web:e8c20766870ea42f27f993"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>

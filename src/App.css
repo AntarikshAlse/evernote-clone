@@ -1,38 +1,55 @@
-.App {
+html, body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#evernote-container {
+  height: 100%;
+  box-sizing: border-box;
+}
+.root::before{
+  background-color: blueviolet;
+  content:" Evernote Clone";
+  font-weight: 700;
+  color:white;
+  padding-bottom: 1rem; 
+  font-size:x-large;
   text-align: center;
+  clear: both;
+  display: block;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.root {
+  height: 100%;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.root::after{
+  content:" ";
+  display: block;
+  clear: both;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.quill {
+  height: 100%;
+  box-sizing: border-box;
+  width: calc(100% - 300px);
+  float: left;
 }
-
-.App-link {
-  color: #61dafb;
+.ql-container {
+  box-sizing: border-box;
+  height: calc(100% - 42px);
+  overflow-y: scroll;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ql-editor {
+  cursor: text;
+}
+.MuiListItem-root.Mui-selected {
+  background-color: #d4d8e8 !important;
+}
+.no-note-selected {
+  font-size: 48px;
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 165px);
 }
